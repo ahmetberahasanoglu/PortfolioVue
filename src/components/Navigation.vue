@@ -61,7 +61,7 @@ export default {
 }
 
 .logo a:hover {
-  transform: scale(1.1); 
+  transform: scale(1.3); 
   color: #fff;
 }
 
