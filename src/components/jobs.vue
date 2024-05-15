@@ -1,6 +1,12 @@
 <template>
   <div class="latest-work-container">
-    <h1>Yaptıklarım</h1><br>
+    <br>
+    <div class="specialities">
+      <div class="speciality">UX Design</div>
+      <div class="speciality">Interactive Design</div>
+      <div class="speciality">Product Design</div>
+    </div>
+    <h1>Yaptıklarım</h1>
     <div class="gallery">
       <a v-for="(project, index) in projects" :key="index" class="gallery-item">
         <img class="gallery-item-image" :src="project.image" :alt="project.title" />
@@ -24,8 +30,8 @@ export default {
         { title: "Proje 4", image: require("@/assets/job1.png"), category: "Grafik Tasarım" },
         { title: "Proje 5", image: require("@/assets/job2.png"), category: "Grafik Tasarım" },
         { title: "Proje 6", image: require("@/assets/job3.png"), category: "Grafik Tasarım" },
-        { title: "Proje 6", image: require("@/assets/job3.png"), category: "Grafik Tasarım" },
-        { title: "Proje 6", image: require("@/assets/job3.png"), category: "Grafik Tasarım" },
+        { title: "Proje 6", image: require("@/assets/job1.png"), category: "Grafik Tasarım" },
+        { title: "Proje 6", image: require("@/assets/job2.png"), category: "Grafik Tasarım" },
       ]
     };
   }
@@ -38,7 +44,23 @@ export default {
   flex-direction: column;
   align-items: center; 
 }
+.specialities {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
 
+.speciality {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  font-weight: bold;
+}
+.speciality:hover{
+  transform: scale(1.01);
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
+}
 .gallery {
   display: flex;
   flex-wrap: wrap;

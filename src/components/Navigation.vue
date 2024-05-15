@@ -1,23 +1,24 @@
 <template>
   <div class="navigation">
     <div class="logo"><a href="#">Logo</a></div>
-    <div class="login">
-      <span v-if="!loggedIn">
-        <a href="#">Login</a> | <a href="#">Sign In</a>
-      </span>
-      <span v-else>
-        <span>
-          <img src="@/assets/job1.png" alt="User Icon" class="user-icon" />
-        </span>
-        <span>{{ username }}</span>
-      </span>
-    </div>
+
     <nav>
       <div class="links">
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Work</a>
         <a href="#" class="marginR">Contact</a>
+        <div class="login">
+          <span v-if="!loggedIn">
+            <a href="#">Login</a> | <a href="#">Sign In</a>
+          </span>
+          <span v-else>
+            <span>
+              <img src="@/assets/job1.png" alt="User Icon" class="user-icon" />
+            </span>
+            <span>{{ username }}</span>
+          </span>
+        </div>
       </div>
     </nav>
   </div>
@@ -35,11 +36,11 @@ export default {
 </script> 
 
 <style scoped>
-.marginR{
+.marginR {
   margin-right: 20px;
 }
 .navigation {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -47,7 +48,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(44, 62, 80, 0.9); /* Hafif yarı şeffaf arka plan */
+  background-color: rgba(44, 62, 80, 1); /*0.9 opacity arka plan */
   padding: 10px 20px;
   font-family: "Poppins", sans-serif;
 }
@@ -57,11 +58,11 @@ export default {
   font-size: 25px;
   color: #ff7f50;
   text-decoration: none;
-  transition: transform 0.3s ease; /* Büyüme efekti için geçiş eklendi */
+  transition: transform 0.3s ease;
 }
 
 .logo a:hover {
-  transform: scale(1.3); 
+  transform: scale(1.3);
   color: #fff;
 }
 
@@ -81,9 +82,15 @@ export default {
 .login a:hover {
   color: #ff7f50;
 }
-
+.login img:hover{
+  transform: scale(1.3);
+}
+.login img{
+  width: auto;
+  height: 25px;
+}
 .user-icon {
-  width: 20px; /* Daha büyük ikon */
+  width: 20px;
   height: 20px;
   margin-right: 5px;
 }

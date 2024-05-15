@@ -1,6 +1,6 @@
 <template>
   <div class="comment-container">
-    <div class="comments-container">
+    <div v-if="comments.length > 0" class="comments-container">
       <div
         v-for="(comment, index) in comments"
         :key="index"
@@ -13,16 +13,18 @@
             </div>
             <div class="commenter-info">{{ comment.commenterName }}</div>
             <div class="comment-stars">
-              <img
+              <i
                 v-for="star in comment.rating"
                 :key="star"
-                src="@/assets/yıldız-dolu1.png"
-                alt="filled star"
-              />
+                class="fas fa-star"
+              ></i>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div v-else>
+      <p>No comments available.</p>
     </div>
     <div class="work-and-input">
       <div class="lets-work-together">
@@ -48,18 +50,17 @@
         <div class="character-count">{{ commentText.length }}/36</div>
         <button @click="addComment" class="yorum">Yorumu Gönder</button>
         <div class="rating-stars">
-          <img
+          <i
             v-for="star in 5"
             :key="star"
-            :src="
-              star <= tempRating
-                ? require('@/assets/yıldız-dolu1.png')
-                : require('@/assets/yıldız-bos.png')
-            "
+            :class="{
+              'fas fa-star': star <= tempRating,
+              'far fa-star': star > tempRating,
+            }"
             @mouseover="highlightStars(star)"
-            @mouseleave="resetStars"
+            @mouseleave="resetStarsIfNeeded"
             @click="setRating(star)"
-          />
+          ></i>
         </div>
       </div>
     </div>
@@ -72,7 +73,7 @@ export default {
     return {
       commenterName: "Ahmet Hasanoglu",
       commentText: "",
-      rating: 1,
+      rating: 0,
       tempRating: null,
       comments: [],
     };
@@ -80,23 +81,35 @@ export default {
   methods: {
     addComment() {
       if (this.commentText) {
+        if (!this.rating) {
+          alert("Lütfen bir puan verin!");
+          return;
+        }
         this.comments.unshift({
           commenterName: this.commenterName,
           commentText: this.commentText,
           rating: this.rating,
         });
         this.commentText = "";
-        this.rating = 1;
+        this.rating = 0;
+        this.resetStars();
       } else {
         alert("Lütfen yorumunuzu girin!");
       }
     },
     setRating(rating) {
       this.rating = rating;
-      this.tempRating = null;
+      this.tempRating = rating;
     },
     highlightStars(star) {
-      this.tempRating = star;
+      if (!this.rating) {
+        this.tempRating = star;
+      }
+    },
+    resetStarsIfNeeded() {
+      if (this.rating == 0) {
+        this.tempRating = null;
+      }
     },
     resetStars() {
       this.tempRating = null;
@@ -111,6 +124,8 @@ export default {
   },
 };
 </script>
+
+
 
 <style scoped>
 .comment-container {
@@ -170,9 +185,7 @@ export default {
   width: 20px;
   height: 20px;
 }
-.comment-stars img:hover{
-  transform: scale(1.1);
-}
+
 .work-and-input {
   display: flex;
   flex-direction: column;
@@ -211,6 +224,7 @@ export default {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  margin-top: 20px; /* Yeni eklenen stil */
 }
 
 textarea {
@@ -242,9 +256,12 @@ textarea {
   cursor: pointer;
   background-color: #20303f;
   color: white;
+  margin-top: 10px; /* Yeni eklenen stil */
 }
-.yorum:hover{
-  background-color: #445566;
-  transform: scale(1.5);
+
+.yorum:hover {
+  background-color: #2b3c4b;
+  transform: scale(1.03);
+  filter: drop-shadow(2px 4px 6px #20303f);
 }
 </style>

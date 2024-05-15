@@ -51,6 +51,7 @@ body {
   justify-content: center;
   text-align: left;
   padding: 20px;
+  margin-top: 60px;
   color: #2c3e50; /* Varsayılan metin rengi */
 }
 
@@ -113,6 +114,6 @@ body {
 
 .skills li img:hover {
   transform: scale(1.2);
-  filter: drop-shadow(2px 4px 6px #ff7f50); /* Turuncu gölge efekti */
+  filter: drop-shadow(2px 4px 6px #ff7f50);
 }
 </style>

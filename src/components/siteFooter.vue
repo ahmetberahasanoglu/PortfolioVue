@@ -16,22 +16,22 @@ export default {};
 <style scoped>
 .footer {
   display: flex;
-  flex-direction: column; /* Mobil uyum için dikey hizalama */
-  justify-content: center; /* Merkezde hizalama */
-  align-items: center; /* Ortada hizalama */
-  padding: 1rem; /* İçerik boşluğu */
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 10px; 
   color: white;
-  background: #2c3e50; 
-  border-top: 4px solid red;
-  position: relative;
-  bottom: 0;
+  background-color: rgba(44, 62, 80, 0.9);
+  border-top: 4px solid #ff7f50;
+  position: static; 
+  bottom: 0; 
   width: 100%;
-  text-align: center; /* Metin ortalama */
+  text-align: center;
   font-weight: 300;
 }
 
 .footer p {
-  margin: 5px 0; /* Üst ve alt boşluk */
+  margin: 5px 0; 
 }
 
 a {
@@ -41,7 +41,7 @@ a {
 }
 
 a:hover {
-  color: #ff7f50; /* Hover'da renk değişimi */
+  color: #ff7f50; 
 }
 
 @media (min-width: 600px) {
@@ -52,7 +52,7 @@ a:hover {
   }
 
   .footer p {
-    margin: 0 10px; /* Yatay boşluk */
+    margin: 0 10px; 
   }
 }
 </style>
