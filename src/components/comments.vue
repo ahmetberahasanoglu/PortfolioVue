@@ -24,43 +24,48 @@
       </div>
     </div>
     <div v-else>
-      <p>No comments available.</p>
+      <p>Henüz bir yorum yapılmamış.</p>
     </div>
     <div class="work-and-input">
-      <div class="lets-work-together">
-        <h2>Let's Work Together</h2>
-        <div class="contact-links">
-          <a href="https://twitter.com/yourusername" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://github.com/yourusername" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="mailto:example@gmail.com">
-            <i class="far fa-envelope"></i>
-          </a>
+      <div class="work-and-input-wrapper">
+        
+        <div class="lets-work-together">
+          <h2>Let's Work Together</h2>
+          <div class="contact-links">
+            <a href="https://twitter.com/yourusername" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:example@gmail.com">
+              <i class="far fa-envelope"></i>
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="input-group">
-        <textarea
-          v-model="commentText"
-          placeholder="Yorumunuz"
-          maxlength="36"
-        ></textarea>
-        <div class="character-count">{{ commentText.length }}/36</div>
-        <button @click="addComment" class="yorum">Yorumu Gönder</button>
-        <div class="rating-stars">
-          <i
-            v-for="star in 5"
-            :key="star"
-            :class="{
-              'fas fa-star': star <= tempRating,
-              'far fa-star': star > tempRating,
-            }"
-            @mouseover="highlightStars(star)"
-            @mouseleave="resetStarsIfNeeded"
-            @click="setRating(star)"
-          ></i>
+        
+        <div class="input-group">
+          <textarea
+            v-model="commentText"
+            placeholder="Yorumunuz"
+            maxlength="36"
+          ></textarea>
+         
+          <div class="character-count">{{ commentText.length }}/36</div>
+          <div class="rating-stars">
+            <i
+              v-for="star in 5"
+              :key="star"
+              :class="{
+                'fas fa-star': star <= tempRating,
+                'far fa-star': star > tempRating,
+              }"
+              @mouseover="highlightStars(star)"
+              @mouseleave="resetStarsIfNeeded"
+              @click="setRating(star)"
+            ></i>
+          </div>
+          <button @click="addComment" class="yorum">Yorumu Gönder</button>
         </div>
       </div>
     </div>
@@ -125,8 +130,6 @@ export default {
 };
 </script>
 
-
-
 <style scoped>
 .comment-container {
   display: flex;
@@ -179,19 +182,28 @@ export default {
 .commenter-info {
   font-style: italic;
   color: #555; /* Daha açık renk */
+  
 }
 
 .comment-stars img {
   width: 20px;
   height: 20px;
+  
 }
 
 .work-and-input {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+  justify-content: center;
+ 
   width: 100%;
+}
+
+.work-and-input-wrapper {
+  display: flex;
+  justify-content: space-between; /* Elemanları aralarda hizala */
+  align-items: flex-start; /* Dikeyde üste hizala */
+  width: 100%;
+  max-width: 600px; /* İstenilen maksimum genişlik */
 }
 
 .lets-work-together {
@@ -242,10 +254,9 @@ textarea {
   color: #666;
 }
 
-.rating-stars img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
+.rating-stars {
+  display: flex;
+  align-items: center;
 }
 
 .yorum {
@@ -256,7 +267,6 @@ textarea {
   cursor: pointer;
   background-color: #20303f;
   color: white;
-  margin-top: 10px; /* Yeni eklenen stil */
 }
 
 .yorum:hover {
@@ -264,4 +274,6 @@ textarea {
   transform: scale(1.03);
   filter: drop-shadow(2px 4px 6px #20303f);
 }
+
 </style>
+
