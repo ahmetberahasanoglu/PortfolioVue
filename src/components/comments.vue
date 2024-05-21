@@ -28,7 +28,6 @@
     </div>
     <div class="work-and-input">
       <div class="work-and-input-wrapper">
-        
         <div class="lets-work-together">
           <h2>Let's Work Together</h2>
           <div class="contact-links">
@@ -43,14 +42,12 @@
             </a>
           </div>
         </div>
-        
         <div class="input-group">
           <textarea
             v-model="commentText"
             placeholder="Yorumunuz"
             maxlength="36"
           ></textarea>
-         
           <div class="character-count">{{ commentText.length }}/36</div>
           <div class="rating-stars">
             <i
@@ -132,148 +129,127 @@ export default {
 
 <style scoped>
 .comment-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 1260px;
-  margin: 0 auto;
   padding: 20px;
-  text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .comments-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .comment-wrapper {
-  flex: 0 0 calc(50% - 10px);
-  display: flex;
-  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .comment {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 10px; 
-  padding: 20px; 
-  background-color: #f9f9f9; 
-  width: 100%;
 }
 
 .comment-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-text {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.commenter-info {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.comment-stars i {
+  color: #ff7f50;
+}
+
+.work-and-input {
+  margin-top: 20px;
+}
+
+.work-and-input-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-.comment-text {
-  font-size: 16px; 
-  margin-bottom: 10px;
-}
-
-.commenter-info {
-  font-style: italic;
-  color: #555;
-  
-}
-
-.comment-stars img {
-  width: 20px;
-  height: 20px;
-  
-}
-
-.work-and-input {
-  display: flex;
-  justify-content: center;
- 
-  width: 100%;
-}
-
-.work-and-input-wrapper {
-  display: flex;
-  justify-content: space-between; 
-  align-items: flex-start; 
-  width: 100%;
-  max-width: 600px;
-}
-
-.lets-work-together {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
+.lets-work-together h2 {
+  font-size: 24px;
+  color: #2c3e50;
 }
 
 .contact-links a {
+  margin: 0 5px;
+  color: #2c3e50;
+  font-size: 24px;
   text-decoration: none;
-  color: #333;
-  font-size: 1.5rem;
   transition: color 0.3s;
 }
 
 .contact-links a:hover {
-  color: #007bff;
+  color: #ff7f50;
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
-  margin-top: 20px; 
+  width: 100%;
+  max-width: 600px;
 }
 
 textarea {
-  width: 100%; 
-  max-width: 300px; 
-  height: 60px;
-  padding: 10px; 
-  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  resize: none;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
 
 .character-count {
+  text-align: right;
   font-size: 12px;
-  color: #666;
+  color: #777;
 }
 
 .rating-stars {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.rating-stars i {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ff7f50;
+}
+
+.rating-stars .far.fa-star {
+  color: #ccc;
 }
 
 .yorum {
-  padding: 10px;
+  padding: 10px 20px;
   border: none;
-  font-size: 15px;
-  border-radius: 5px;
+  background-color: #ff7f50;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 8px;
   cursor: pointer;
-  background-color: #20303f;
-  color: white;
+  transition: background-color 0.3s;
 }
 
 .yorum:hover {
-  background-color: #2b3c4b;
-  transform: scale(1.03);
-  filter: drop-shadow(2px 4px 6px #20303f);
+  background-color: #ff5722;
 }
-
 </style>
-

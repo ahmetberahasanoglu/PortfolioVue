@@ -1,7 +1,6 @@
 <template>
   <div class="navigation">
     <div class="logo"><a href="#">Logo</a></div>
-
     <nav>
       <div class="links">
         <a href="#">Home</a>
@@ -48,7 +47,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(44, 62, 80, 1); /*0.9 opacity arka plan */
+  background-color: rgba(44, 62, 80, 1);
   padding: 10px 20px;
   font-family: "Poppins", sans-serif;
 }
@@ -116,4 +115,3 @@ nav {
   color: #ff7f50;
 }
 </style>
-
