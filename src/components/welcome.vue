@@ -40,28 +40,28 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #fff; /* Beyaz arka plan rengi */
+  background-color: #fff; 
   font-family: "Poppins", sans-serif;
 }
 
 .portfolio {
   display: flex;
-  flex-direction: row; /* Yatay hizalama */
+  flex-direction: row; 
   align-items: center;
   justify-content: center;
   text-align: left;
   padding: 20px;
   margin-top: 60px;
-  color: #2c3e50; /* Varsayılan metin rengi */
+  color: #2c3e50; 
 }
 
 .welcome .content {
-  margin-right: 20px; /* İçeriği resimden ayırmak için boşluk */
+  margin-right: 20px; 
 }
 
 .content h2 {
   font-size: 24px;
-  color: #ff7f50; /* Turuncu */
+  color: #ff7f50; 
 }
 
 .welcome h1 {
@@ -77,13 +77,13 @@ body {
 }
 
 .image {
-  flex-shrink: 0; /* Resmin daralmamasını sağlar */
+  flex-shrink: 0; 
 }
 
 .image img {
-  width: 250px; /* Daha büyük resim */
+  width: 250px; 
   height: auto;
-  border-radius: 20%; /* Daha yuvarlak köşeler */
+  border-radius: 20%; 
 }
 
 .skills-container {

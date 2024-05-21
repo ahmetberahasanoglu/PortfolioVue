@@ -46,9 +46,9 @@ a:hover {
 
 @media (min-width: 600px) {
   .footer {
-    flex-direction: row; /* Geniş ekranlarda yatay hizalama */
-    height: 60px; /* Yüksekliği artırma */
-    padding: 0 2rem; /* Yatay boşluk */
+    flex-direction: row; 
+    height: 60px;
+    padding: 0 2rem; 
   }
 
   .footer p {

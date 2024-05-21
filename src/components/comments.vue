@@ -161,9 +161,9 @@ export default {
   flex-direction: column;
   align-items: center;
   border: 1px solid #ccc;
-  border-radius: 10px; /* Yuvarlatılmış köşeler */
-  padding: 20px; /* Daha geniş padding */
-  background-color: #f9f9f9; /* Daha açık arka plan */
+  border-radius: 10px; 
+  padding: 20px; 
+  background-color: #f9f9f9; 
   width: 100%;
 }
 
@@ -175,13 +175,13 @@ export default {
 }
 
 .comment-text {
-  font-size: 16px; /* Daha büyük yazı tipi */
+  font-size: 16px; 
   margin-bottom: 10px;
 }
 
 .commenter-info {
   font-style: italic;
-  color: #555; /* Daha açık renk */
+  color: #555;
   
 }
 
@@ -200,10 +200,10 @@ export default {
 
 .work-and-input-wrapper {
   display: flex;
-  justify-content: space-between; /* Elemanları aralarda hizala */
-  align-items: flex-start; /* Dikeyde üste hizala */
+  justify-content: space-between; 
+  align-items: flex-start; 
   width: 100%;
-  max-width: 600px; /* İstenilen maksimum genişlik */
+  max-width: 600px;
 }
 
 .lets-work-together {
@@ -236,14 +236,14 @@ export default {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-top: 20px; /* Yeni eklenen stil */
+  margin-top: 20px; 
 }
 
 textarea {
-  width: 100%; /* Genişlik arttırıldı */
-  max-width: 300px; /* Maksimum genişlik sınırı */
+  width: 100%; 
+  max-width: 300px; 
   height: 60px;
-  padding: 10px; /* Daha geniş padding */
+  padding: 10px; 
   border-radius: 5px;
   border: 1px solid #ccc;
   resize: none;
