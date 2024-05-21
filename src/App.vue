@@ -23,7 +23,7 @@ import comments from "./components/comments.vue";
 export default {
   name: "App",
   components: { Modal, Nav, welcome, jobs, siteFooter,comments },
-  data() {
+ /* data() {
     return {
       header: "Çekiliş için üye olun",
       text: "Yarı fiyatına almak için NFT alın",
@@ -43,7 +43,7 @@ export default {
     toggleModalTwo() {
       this.showModalTwo = !this.showModalTwo;
     },
-  },
+  },*/
 };
 </script>
 

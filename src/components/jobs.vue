@@ -28,7 +28,7 @@ export default {
         { title: "Proje 2", image: require("@/assets/job2.png"), category: "Web Tasarımı" },
         { title: "Proje 3", image: require("@/assets/job3.png"), category: "Grafik Tasarım" },
         { title: "Proje 4", image: require("@/assets/job1.png"), category: "UX, User Experience" },
-        { title: "Proje 5", image: require("@/assets/job2.png"), category: "Grafik Tasarım" },
+        { title: "Proje 5", image: require("@/assets/job2.png"), category: "Backend Developer" },
         { title: "Proje 6", image: require("@/assets/job3.png"), category: "UI, Sanat yönetmeliği" },
         { title: "Proje 7", image: require("@/assets/job1.png"), category: "Grafik Tasarım" },
         { title: "Proje 8", image: require("@/assets/job2.png"), category: "Web Tasarımı" },

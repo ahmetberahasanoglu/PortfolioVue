@@ -29,7 +29,9 @@ export default {
     return {
       loggedIn: true,
       username: "Ahmet",
-    };
+    };/*
+      method eklenip logged in kısmını önce js ile sonra backendden bağlayabiliriz.
+    */
   },
 };
 </script> 

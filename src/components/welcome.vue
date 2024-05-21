@@ -3,7 +3,7 @@
     <div class="welcome">
       <div class="content">
         <h2>{{ skills[0] }} | {{ skills[1] }}</h2>
-        <h1>Web Developer</h1>
+        <h1>{{profession}}</h1>
         <p>Hey I am {{ name }} please contact me for your web design jobs adssaduygsadasyjdvasdıasvdaısdsa</p>
       </div>
     </div>
@@ -28,6 +28,8 @@ export default {
     return {
       name: "Ahmet",
       skills: ["Branding", "Design"],
+      profession:"Web Developer",
+      veri:123
     };
   },
 };
@@ -113,7 +115,8 @@ body {
 }
 
 .skills li img:hover {
-  transform: scale(1.2);
+  transform: scale(0.8);
+
   filter: drop-shadow(2px 4px 6px #ff7f50);
 }
 </style>

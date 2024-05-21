@@ -1,10 +1,10 @@
 <template>
   <div class="footer">
     <p>
-      This portfolio made by Ahmet for whatever reasons
+      This portfolio made by Ahmet for proje
     </p>
     <p>
-      © Created for something <a href="#">asdasd</a>
+      © Created by Projeci <a href="#">asdasd</a>
     </p>
   </div>
 </template>
