@@ -11,7 +11,7 @@
             <div class="comment-text">
               {{ truncateText(comment.commentText, 36) }}
             </div>
-            <div class="commenter-info">{{ comment.commenterName }}</div>
+         <div class="commenter-info">    <!--{{ comment.commenterName }} --></div>
             <div class="comment-stars">
               <i
                 v-for="star in comment.rating"
